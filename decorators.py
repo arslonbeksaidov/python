@@ -106,7 +106,29 @@ decorated_function_with_arguments(pandas, "Science", "Tools")
 #and pass them to the decorated function
 #This is the decorated function, and it only knows about its arguments: Pandas Science Tools
 
+#-----------------------------------------------------------------------------------------------
+# decorator chaining 
+# first decorator
+def star(f):
+    def wrapped():
+        return '**' + f() + '**'
+    return wrapped
 
+# second decorator
+def plus(f):
+    def wrapped():
+        return '++' + f() + '++'
+    return wrapped
+
+@star
+@plus
+def hello():
+    return 'hello'
+
+print(hello())
+
+# result below
+# **++hello++**
 
 
 
