@@ -1,7 +1,7 @@
 python manage.py collectstatic # should be run last 
 pip install whitenoise=5.1.0
 pip install gunicorn==19.9.0
-
+pip install django-model-utils # for timestamp and other utilits
 # Add these new lines in settings.py
 
 
