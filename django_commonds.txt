@@ -1,0 +1,27 @@
+python manage.py collectstatic # should be run last 
+pip install whitenoise=5.1.0
+pip install gunicorn==19.9.0
+
+# Add these new lines in settings.py
+
+
+#allowed hosts config
+ALLOWED_HOSTS = [.herokuapp.com,localhost,127.0.0.1]
+
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+
+# add this in installed apps 
+after contrib.messages
+'whitenoise.runserver_nostatic'
+
+# add this in middleware
+after SessionMiddleware
+'whitenoise.middleware.WhiteNoiseMiddleware'
+-------------------------------------------------
+#create new file in main dir path. Called Pacfile.txt. And in it, past this line code : "web:gunicorn <yourmainappname>.wsgi --log-file -" 
