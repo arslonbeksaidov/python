@@ -62,7 +62,29 @@ x = txt.swapcase()
 txt = "Thank you for the music\nWelcome to the jungle"
 
 x = txt.splitlines()
-# ---------------------------
+# --------------------------- satrni berilgan belgi bo'yicha listga o'tiradi. Default belgi " ". Params: seperator,maxsplit = "-1" default. maxsplit- necha marta listga qo'shilishi.
+txt = "welcome to the jungle"
 
+x = txt.split()
+# ---------------------- O'ng taraf bosh joylarni olib tashlaydi.
+txt = "     banana     "
+
+x = txt.rstrip()
+# ----------------------------- ohirda uchuragan textni bosh harfini indexi qaytaradi.
+txt = "Mi casa, su casa."
+
+x = txt.rindex("casa")
+x = txt.rfind() # bir xil ikkalasi.
+# ------------------------------------ stringlarni almashtirish.
+txt = "I like bananas"
+
+x = txt.replace("bananas", "apples")
+
+# --------------------------------- tuple ni birlashtirish.
+ myTuple = ("John", "Peter", "Vicky")
+
+x = "#".join(myTuple)
+
+print(x) 
 
 
