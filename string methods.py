@@ -85,6 +85,14 @@ x = txt.replace("bananas", "apples")
 
 x = "#".join(myTuple)
 
-print(x) 
+# --------------- Stringda qirqib olish usullari.
+b = "Hello, World!"
+print(b[2:5]) # Boshlang'ich index 0 dan boshlanadi va 4 da tugaydi b kirmaydi.
+# ---------------  0 dan 4 gacha
+b = "Hello, World!"
+print(b[:5])
+# ---------------------- 2 dan ohirigacha
+b = "Hello, World!"
+print(b[2:])
 
 
