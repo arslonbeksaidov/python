@@ -46,7 +46,23 @@ txt = "CompanyX"
 
 x = txt.isalpha()
 
-print(x)
+# ------------------------ Satrni bosh harflarga o'tkazish
+txt = "Hello my friends"
+
+x = txt.upper()
+# --------------------- Boshidagi va ohiridagi bosh joylarni olib tashlaydi
+txt = "     banana     "
+
+x = txt.strip()
+# ---------------------- kattani kichikka va kichikni kattaga o'tkazadi.
+txt = "Hello My Name Is PETER"
+
+x = txt.swapcase()
+# ----------------- Line bo'yicha bo'lib list qiladi. params:keeplinebreaks = true bo'lsa \n qo'yib ketadi.
+txt = "Thank you for the music\nWelcome to the jungle"
+
+x = txt.splitlines()
+# ---------------------------
 
 
 
